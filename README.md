@@ -1,27 +1,97 @@
 # Soaked
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.8.
+Soaked is an Angular-based web application that serves as a leaderboard and promotional platform for online gaming affiliates. The project focuses on tracking and displaying user statistics from Roobet and Packdraw gaming platforms, providing a seamless interface for users to view leaderboard rankings and access the gaming platforms.
 
-## Development server
+## Tech Stack
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- **Frontend Framework**: Angular 17.3.x
+- **Server-Side Rendering**: Angular SSR (Server-Side Rendering)
+- **Backend**: Express.js
+- **HTTP Communication**: Angular HttpClient
+- **Styling**: CSS with custom animations and responsive design
+- **Routing**: Angular Router for navigation between different views
+- **API Integration**: RESTful API integration with gaming platforms
 
-## Code scaffolding
+## Features
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- **Dual Platform Integration**: Seamlessly connects with both Roobet and Packdraw gaming platforms
+- **Leaderboard Display**: Shows real-time leaderboard data from affiliate programs
+- **Responsive Design**: Optimized for both desktop and mobile devices
+- **Server-Side Rendering**: Improved performance and SEO with Angular SSR
+- **API Authentication**: Secure API calls with token-based authentication
+- **Date Range Filtering**: Filter statistics based on custom date ranges
 
-## Build
+## Main Components
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- **Landing Component**: The main entry point displaying user statistics and promotional content
+- **Packdraw Component**: Dedicated view for Packdraw-specific leaderboard and information
+- **User Lists**: Displays user rankings and statistics
+- **Header/Footer**: Navigation and branding elements
 
-## Running unit tests
+## API Integration
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+The application integrates with two primary APIs:
+1. **Roobet API**: Fetches affiliate statistics and user data
+2. **Packdraw API**: Retrieves leaderboard information and promotional content
 
-## Running end-to-end tests
+## Getting Started
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Prerequisites
 
-## Further help
+- Node.js (v18.x or later recommended)
+- Angular CLI (v17.3.x)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### Installation
+
+```bash
+# Clone the repository
+git clone <repository-url>
+
+# Navigate to the project directory
+cd soaked
+
+# Install dependencies
+npm install
+```
+
+### Development Server
+
+```bash
+# Start the development server
+ng serve
+
+# Navigate to http://localhost:4200/
+```
+
+### Building for Production
+
+```bash
+# Build the project
+ng build
+
+# For SSR build
+ng build && ng run soaked:server
+```
+
+### Running the Server
+
+```bash
+# After building, run the server
+node dist/soaked/server/server.mjs
+```
+
+## Project Structure
+
+- `src/app/components/`: Contains all Angular components
+- `src/app/services/`: API services for data fetching
+- `src/app/pipe/`: Custom Angular pipes
+- `src/assets/`: Static assets like images and icons
+- `server.ts`: Express server configuration for SSR
+
+## Deployment
+
+The application is configured for deployment on platforms like Vercel with server-side rendering support.
+
+## License
+
+This project is proprietary software.
